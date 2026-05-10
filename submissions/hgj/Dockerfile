@@ -59,4 +59,4 @@ ENV PYTHONPATH=/app
 HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
     CMD python -c "import cv2; import numpy" || exit 1
 
-CMD ["pytest", "-v"]
+CMD ["pytest", "tests/", "-v", "--cov=src"]
